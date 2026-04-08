@@ -91,14 +91,14 @@ func TestClient_BlockWithConfig(t *testing.T) {
 							Meta: &TransactionMeta{
 								Err: nil,
 								Fee: 10000,
-								PreBalances: []int64{
+								PreBalances: []uint64{
 									499999845001,
 									1000000000000000,
 									143487360,
 									1169280,
 									1,
 								},
-								PostBalances: []int64{
+								PostBalances: []uint64{
 									499999835001,
 									1000000000000000,
 									143487360,

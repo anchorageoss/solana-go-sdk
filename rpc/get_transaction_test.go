@@ -78,7 +78,7 @@ func TestGetTransaction(t *testing.T) {
 								"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
 							},
 							Rewards: []Reward{},
-							PreBalances: []int64{
+							PreBalances: []uint64{
 								38026659881,
 								0,
 								1461600,
@@ -87,7 +87,7 @@ func TestGetTransaction(t *testing.T) {
 								1,
 								898174080,
 							},
-							PostBalances: []int64{
+							PostBalances: []uint64{
 								38024615601,
 								2039280,
 								1461600,
@@ -211,7 +211,7 @@ func TestGetTransaction(t *testing.T) {
 								"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
 							},
 							Rewards: []Reward{},
-							PreBalances: []int64{
+							PreBalances: []uint64{
 								38026659881,
 								0,
 								1461600,
@@ -220,7 +220,7 @@ func TestGetTransaction(t *testing.T) {
 								1,
 								898174080,
 							},
-							PostBalances: []int64{
+							PostBalances: []uint64{
 								38024615601,
 								2039280,
 								1461600,
@@ -293,11 +293,11 @@ func TestGetTransaction(t *testing.T) {
 						Meta: &TransactionMeta{
 							Err: nil,
 							Fee: 5000,
-							PreBalances: []int64{
+							PreBalances: []uint64{
 								34358794287,
 								1141440,
 							},
-							PostBalances: []int64{
+							PostBalances: []uint64{
 								34358789287,
 								1141440,
 							},
@@ -354,7 +354,7 @@ func TestGetTransaction(t *testing.T) {
 						Meta: &TransactionMeta{
 							Err: nil,
 							Fee: 5000,
-							PreBalances: []int64{
+							PreBalances: []uint64{
 								112595193235,
 								2039280,
 								934087680,
@@ -364,7 +364,7 @@ func TestGetTransaction(t *testing.T) {
 								1461600,
 								1461600,
 							},
-							PostBalances: []int64{
+							PostBalances: []uint64{
 								112595188235,
 								2039280,
 								934087680,

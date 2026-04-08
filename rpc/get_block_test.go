@@ -46,14 +46,14 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499999845001,
 										1000000000000000,
 										143487360,
 										1169280,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499999835001,
 										1000000000000000,
 										143487360,
@@ -132,14 +132,14 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499999845001,
 										1000000000000000,
 										143487360,
 										1169280,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499999835001,
 										1000000000000000,
 										143487360,
@@ -202,14 +202,14 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499999845001,
 										1000000000000000,
 										143487360,
 										1169280,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499999835001,
 										1000000000000000,
 										143487360,
@@ -380,14 +380,14 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499999845001,
 										1000000000000000,
 										143487360,
 										1169280,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499999835001,
 										1000000000000000,
 										143487360,
@@ -468,12 +468,12 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 5000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										10000000000000,
 										1,
 										0,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										9998999995000,
 										1,
 										1000000000,
@@ -503,12 +503,12 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 5000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										9998999995000,
 										1000000000,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										9997999990000,
 										2000000000,
 										1,
@@ -536,12 +536,12 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499765110000,
 										1000000000000000,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499765100000,
 										1000000000000000,
 										1,
@@ -607,11 +607,11 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 5000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										20000000000,
 										1141440,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										19999995000,
 										1141440,
 									},
@@ -644,12 +644,12 @@ func TestGetBlock(t *testing.T) {
 								Meta: &TransactionMeta{
 									Err: nil,
 									Fee: 10000,
-									PreBalances: []int64{
+									PreBalances: []uint64{
 										499998892500,
 										1000000000000000,
 										1,
 									},
-									PostBalances: []int64{
+									PostBalances: []uint64{
 										499998882500,
 										1000000000000000,
 										1,
