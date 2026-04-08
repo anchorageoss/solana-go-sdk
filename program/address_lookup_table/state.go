@@ -76,9 +76,11 @@ func DeserializeLookupTable(data []byte, accountOwner common.PublicKey) (Address
 		current += 1
 		if some {
 			pubkey := common.PublicKeyFromBytes(data[current : current+32])
-			current += 32
 			addressLookupTable.Authority = &pubkey
 		}
+		// The on-chain format always writes 32 bytes for the authority pubkey
+		// (zeros when None), so we must always advance past them.
+		current += 32
 
 		addressLookupTable.padding = binary.LittleEndian.Uint16(data[current : current+2])
 		current += 2

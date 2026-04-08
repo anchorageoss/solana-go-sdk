@@ -96,6 +96,46 @@ func TestDeserializeLookupTable(t *testing.T) {
 			},
 			wantErr: nil,
 		},
+		{
+			name: "authority_none",
+			args: args{
+				// On-chain layout: Authority = None (flag=0, 32 zero bytes still present)
+				// [0:4]   ProgramState = 1 (LookupTable)
+				// [4:12]  DeactivationSlot = max uint64
+				// [12:20] LastExtendedSlot = 0
+				// [20:21] LastExtendedSlotStartIndex = 0
+				// [21:22] HasAuthority = 0 (None)
+				// [22:54] Authority pubkey = 32 zero bytes
+				// [54:56] Padding = 0
+				// [56:88] Address 0 = TokenProgramID
+				data: append(
+					// 56-byte header
+					[]byte{
+						1, 0, 0, 0, // ProgramState = LookupTable
+						255, 255, 255, 255, 255, 255, 255, 255, // DeactivationSlot = max
+						0, 0, 0, 0, 0, 0, 0, 0, // LastExtendedSlot = 0
+						0,                               // LastExtendedSlotStartIndex
+						0,                               // HasAuthority = None
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // Authority (zeros)
+						0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, // Authority (zeros)
+						0, 0, // Padding
+					},
+					// 1 address: TokenProgramID
+					common.TokenProgramID.Bytes()...,
+				),
+				accountOwner: common.AddressLookupTableProgramID,
+			},
+			want: AddressLookupTable{
+				ProgramState:               ProgramStateLookupTable,
+				DeactivationSlot:           ^uint64(0),
+				LastExtendedSlot:           0,
+				LastExtendedSlotStartIndex: 0,
+				Authority:                  nil,
+				padding:                    0,
+				Addresses:                  []common.PublicKey{common.TokenProgramID},
+			},
+			wantErr: nil,
+		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
