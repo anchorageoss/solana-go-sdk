@@ -90,7 +90,7 @@ func TestClient_GetTransaction(t *testing.T) {
 							"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL consumed 27016 of 200000 compute units",
 							"Program ATokenGPvbdGVxr1b2hvZbsiqW5xWH25efTNsLJA8knL success",
 						},
-						PreBalances: []int64{
+						PreBalances: []uint64{
 							38026659881,
 							0,
 							1461600,
@@ -99,7 +99,7 @@ func TestClient_GetTransaction(t *testing.T) {
 							1,
 							898174080,
 						},
-						PostBalances: []int64{
+						PostBalances: []uint64{
 							38024615601,
 							2039280,
 							1461600,
@@ -191,12 +191,12 @@ func TestClient_GetTransaction(t *testing.T) {
 							"Program H7WBiBDaZpWwGfhPLmXrdD3r86d6eQfzb184a2arM7Bm consumed 32192 of 200000 compute units",
 							"Program H7WBiBDaZpWwGfhPLmXrdD3r86d6eQfzb184a2arM7Bm success",
 						},
-						PreBalances: []int64{
+						PreBalances: []uint64{
 							109107171519,
 							1,
 							1141440,
 						},
-						PostBalances: []int64{
+						PostBalances: []uint64{
 							109107166519,
 							1,
 							1141440,
@@ -253,7 +253,7 @@ func TestClient_GetTransaction(t *testing.T) {
 					Meta: &TransactionMeta{
 						Err: nil,
 						Fee: 5000,
-						PreBalances: []int64{
+						PreBalances: []uint64{
 							112595193235,
 							2039280,
 							934087680,
@@ -263,7 +263,7 @@ func TestClient_GetTransaction(t *testing.T) {
 							1461600,
 							1461600,
 						},
-						PostBalances: []int64{
+						PostBalances: []uint64{
 							112595188235,
 							2039280,
 							934087680,

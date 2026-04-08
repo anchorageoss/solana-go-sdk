@@ -42,8 +42,8 @@ func (t Transaction) Version() types.MessageVersion {
 type TransactionMeta struct {
 	Err                  any
 	Fee                  uint64
-	PreBalances          []int64
-	PostBalances         []int64
+	PreBalances          []uint64
+	PostBalances         []uint64
 	PreTokenBalances     []rpc.TransactionMetaTokenBalance
 	PostTokenBalances    []rpc.TransactionMetaTokenBalance
 	LogMessages          []string

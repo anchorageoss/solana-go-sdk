@@ -19,8 +19,8 @@ type GetTransaction struct {
 type TransactionMeta struct {
 	Err                  any                               `json:"err"`
 	Fee                  uint64                            `json:"fee"`
-	PreBalances          []int64                           `json:"preBalances"`
-	PostBalances         []int64                           `json:"postBalances"`
+	PreBalances          []uint64                          `json:"preBalances"`
+	PostBalances         []uint64                          `json:"postBalances"`
 	PreTokenBalances     []TransactionMetaTokenBalance     `json:"preTokenBalances"`
 	PostTokenBalances    []TransactionMetaTokenBalance     `json:"postTokenBalances"`
 	Rewards              []Reward                          `json:"rewards"`
